@@ -51,9 +51,9 @@ object RDDDataSourceWithRDBMS {
     val conf = new Configuration()
     //数据源连接参数
     conf.set(DBConfiguration.DRIVER_CLASS_PROPERTY, "com.mysql.jdbc.Driver")
-    conf.set(DBConfiguration.URL_PROPERTY, "jdbc:mysql://localhost:3306/test")
+    conf.set(DBConfiguration.URL_PROPERTY, "jdbc:mysql://HadoopNode00:3306/test")
     conf.set(DBConfiguration.USERNAME_PROPERTY, "root")
-    conf.set(DBConfiguration.PASSWORD_PROPERTY, "960619")
+    conf.set(DBConfiguration.PASSWORD_PROPERTY, "123456")
     //配置查询SQL语句
     conf.set(DBConfiguration.INPUT_QUERY, "select * from t_user")
     conf.set(DBConfiguration.INPUT_COUNT_QUERY, "select count(*) from t_user")
