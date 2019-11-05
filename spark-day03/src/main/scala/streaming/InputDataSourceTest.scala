@@ -20,7 +20,7 @@ object InputDataSourceTest {
     stream.flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_).print()
     //5.启动流数据处理的应用
     ssc.start()
-    //6.关系Streaming应用
+    //6.优雅的关闭Streaming应用
     ssc.awaitTermination()
   }
 }
