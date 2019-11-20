@@ -1,17 +1,14 @@
-package com.baizhi.flink.day01
+package com.baizhi.flink.quickstart
 
 import org.apache.flink.streaming.api.scala._
 
 /**
   * Apache Flink 快速入门程序
   */
-object FlinkWordCountQuickStart03 {
+object FlinkWordCountQuickStart02 {
   def main(args: Array[String]): Unit = {
-    val jarFiles = "flink\\target\\flink-1.0-SNAPSHOT-jar-with-dependencies.jar"
     //1、创建StreamExecutionEnvironment
-    val environment = StreamExecutionEnvironment.createRemoteEnvironment("Spark01",8081,jarFiles)
-
-    environment.setParallelism(2)
+    val environment = StreamExecutionEnvironment.createLocalEnvironment(3)
 
     //2、创建DataStream
     val dataStream: DataStream[String] = environment.socketTextStream("Spark01",9999)
@@ -22,6 +19,6 @@ object FlinkWordCountQuickStart03 {
       .keyBy(0)
       .sum(1)
       .print()
-    environment.execute("FlinkWordCountQuickStart03")
+    environment.execute("FlinkWordCountQuickStart02")
   }
 }

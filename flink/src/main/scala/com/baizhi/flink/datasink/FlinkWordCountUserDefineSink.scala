@@ -1,8 +1,8 @@
-package com.baizhi.flink.day02.datasink
+package com.baizhi.flink.datasink
 
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment, _}
 
-object FlinkWordCountWriteAsCSV {
+object FlinkWordCountUserDefineSink {
   def main(args: Array[String]): Unit = {
     //创建StreamExecutionEnvironment
     val environment = StreamExecutionEnvironment.getExecutionEnvironment
@@ -13,7 +13,7 @@ object FlinkWordCountWriteAsCSV {
       .map((_, 1))
       .keyBy(0)
       .sum(1)
-      .writeAsCsv("file:///d:\\result")
+      .addSink(new UserDefineRichSinkFunction)
     environment.execute()
   }
 }

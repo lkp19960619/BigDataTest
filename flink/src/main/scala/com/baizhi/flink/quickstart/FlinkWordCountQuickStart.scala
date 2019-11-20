@@ -1,4 +1,4 @@
-package com.baizhi.flink.day01
+package com.baizhi.flink.quickstart
 
 import org.apache.flink.streaming.api.scala._
 /**

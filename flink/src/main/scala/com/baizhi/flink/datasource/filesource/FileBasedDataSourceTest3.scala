@@ -1,4 +1,4 @@
-package com.baizhi.flink.day02.datasource.filesource
+package com.baizhi.flink.datasource.filesource
 
 import org.apache.flink.api.common.io.FilePathFilter
 import org.apache.flink.api.java.io.TextInputFormat

@@ -1,4 +1,4 @@
-package com.baizhi.flink.day02.datasource.collection
+package com.baizhi.flink.datasource.collection
 
 import javax.sound.midi.Sequence
 import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment

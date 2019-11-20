@@ -1,4 +1,4 @@
-package com.baizhi.flink.day02.datasource.kafkasource
+package com.baizhi.flink.datasource.kafkasource
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction
 

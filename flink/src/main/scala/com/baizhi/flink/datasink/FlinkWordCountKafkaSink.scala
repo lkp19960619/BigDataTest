@@ -1,4 +1,4 @@
-package com.baizhi.flink.day02.datasink
+package com.baizhi.flink.datasink
 
 
 import java.util.Properties

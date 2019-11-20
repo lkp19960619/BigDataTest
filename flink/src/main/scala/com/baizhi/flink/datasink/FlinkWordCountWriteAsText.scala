@@ -1,4 +1,4 @@
-package com.baizhi.flink.day02.datasink
+package com.baizhi.flink.datasink
 
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 import org.apache.flink.streaming.api.scala._
